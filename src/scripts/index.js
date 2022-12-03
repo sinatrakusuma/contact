@@ -1,15 +1,13 @@
-import 'regenerator-runtime'; /* for async await transpile */
+import 'regenerator-runtime';
 import '../styles/main.css';
-import '../styles/detail.css';
-import '../styles/responsive.css';
-// import './components/jumbotron';
-import swRegister from './utils/sw-register';
+
+import switcherRegister from './utils/switcherregister';
 import App from './views/app';
 
-const skipToContent = document.querySelector('.skip-to-content');
-skipToContent.addEventListener('click', () => {
+const nextToContent = document.querySelector('.next-to-content');
+nextToContent.addEventListener('click', () => {
   document.querySelector('#content').scrollIntoView({ behavior: 'smooth' });
-  skipToContent.blur();
+  nextToContent.blur();
 });
 
 const app = new App({
@@ -25,7 +23,5 @@ window.addEventListener('hashchange', () => {
 window.addEventListener('load', () => {
   app.renderPage();
 
-  swRegister();
+  switcherRegister();
 });
-
-// app();
