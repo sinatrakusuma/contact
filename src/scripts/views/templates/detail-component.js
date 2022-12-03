@@ -2,22 +2,22 @@
 import API_ENDPOINT from "../../globals/api-endpoint";
 
 const detailComponent = (restaurant) => `
-<section class="detail">
+<section class="detail-content">
 <div class="main">
-    <div class="detail-image">
+    <div class="detail-image-content">
     <img src="${API_ENDPOINT.RESTAURANT_IMAGE}${restaurant.pictureId}" alt="${
   restaurant.name
 }">
     </div>
-    <div class="detail-text">
-        <div class="wrapper">        
+    <div class="detail-text-content">
+        <div class="wrapper-wrap">        
         <h3>Toko : ${restaurant.name}</h3>
         <h3>Rating : ${restaurant.rating}</h3>
         <h3>Alamat : ${restaurant.address} ${restaurant.city}</h3>
         </div>
         <p class="description">${restaurant.description}</p>
     </div>  
-    <div class="menus">
+    <div class="menu-cherio">
         <div class="detail-food">
         <h2>Food</h2>
             <ul class="food-list">
@@ -49,10 +49,10 @@ const detailComponent = (restaurant) => `
     ${restaurant.customerReviews
       .map(
         (review) => `
-    <div class="review-item">
-      <p class="review-item-user">${review.name}</p>
-      <p class="review-item-text">${review.review}</p>
-      <p class="review-item-date">${review.date}</p>
+    <div class="review-item-list">
+      <p class="review-item-list-user">${review.name}</p>
+      <p class="review-item-list-text">${review.review}</p>
+      <p class="review-item-list-date">${review.date}</p>
     </div>`
       )
       .join("")}

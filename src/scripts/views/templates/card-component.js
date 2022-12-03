@@ -15,7 +15,7 @@ const cardComponent = (cardItem) => `
         ${cardItem.description.substring(0, 100)}...
     </p>
     <div class="card-footer">
-    <p class="card-rating"><ion-icon name="star"></ion-icon>${
+    <p class="card-rating-value"><ion-icon name="star"></ion-icon>${
       cardItem.rating
     }</p>
     </div>

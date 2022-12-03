@@ -1,6 +1,6 @@
 import routes from '../routes/routes';
 import UrlParser from '../routes/url-parser';
-import DrawerInitiator from '../utils/drawer-initiator';
+import ContainerInitiator from '../utils/container-initiator';
 
 class App {
   // eslint-disable-next-line object-curly-newline
@@ -14,7 +14,7 @@ class App {
   }
 
   _initialAppShell() {
-    DrawerInitiator.init({
+    ContainerInitiator.init({
       button: this._button,
       drawer: this._drawer,
       content: this._content,
